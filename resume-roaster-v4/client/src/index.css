@@ -1,0 +1,46 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:#0a0a09;--s1:#131311;--s2:#1b1b18;--s3:#232320;
+  --border:#2b2b27;--border2:#3a3a35;
+  --text:#eeeae0;--muted:#79766e;--dim:#4f4d49;
+  --accent:#e8622a;--green:#4db87a;--red:#e05252;--amber:#f0b03a;
+}
+body{background:var(--bg);color:var(--text);font-family:'Syne',system-ui,sans-serif;min-height:100vh;}
+.container{max-width:780px;margin:0 auto;padding:0 24px;}
+input,textarea{width:100%;background:var(--s1);border:1.5px solid var(--border);border-radius:12px;color:var(--text);font-family:'Syne',sans-serif;font-size:14px;padding:13px 16px;outline:none;transition:border-color 0.2s;}
+input:focus,textarea:focus{border-color:var(--accent);}
+input::placeholder,textarea::placeholder{color:var(--dim);}
+textarea{font-family:'Space Mono',monospace;font-size:12.5px;line-height:1.7;resize:vertical;}
+.btn-primary{width:100%;padding:16px;background:var(--accent);border:none;border-radius:12px;color:white;font-family:'Syne',sans-serif;font-size:16px;font-weight:800;cursor:pointer;transition:all 0.15s;}
+.btn-primary:hover{background:#d4541e;transform:translateY(-1px);}
+.btn-primary:active{transform:translateY(0);}
+.btn-primary:disabled{background:var(--s3);color:var(--dim);cursor:not-allowed;transform:none;}
+.btn-google{width:100%;padding:14px;background:var(--s2);border:1.5px solid var(--border);border-radius:12px;color:var(--text);font-family:'Syne',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:10px;}
+.btn-google:hover{border-color:var(--border2);background:var(--s3);}
+.btn-ghost{padding:11px 28px;background:transparent;border:1.5px solid var(--border2);border-radius:10px;color:var(--muted);font-family:'Syne',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all 0.15s;}
+.btn-ghost:hover{border-color:var(--text);color:var(--text);}
+.card{background:var(--s1);border:1px solid var(--border);border-radius:14px;padding:22px;}
+.section-label{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.drop-zone{border:1.5px dashed var(--border2);border-radius:14px;padding:44px 24px;text-align:center;cursor:pointer;transition:all 0.2s;background:var(--s1);user-select:none;}
+.drop-zone:hover,.drop-zone.drag-over{border-color:var(--accent);background:rgba(232,98,42,0.05);}
+.file-badge{display:flex;align-items:center;gap:10px;padding:14px 18px;background:rgba(77,184,122,0.08);border:1px solid rgba(77,184,122,0.25);border-radius:12px;font-size:14px;font-weight:700;color:var(--green);}
+.error-box{background:rgba(224,82,82,0.08);border:1px solid rgba(224,82,82,0.25);border-radius:10px;padding:14px 18px;color:var(--red);font-size:13px;margin-top:14px;line-height:1.5;}
+.success-box{background:rgba(77,184,122,0.08);border:1px solid rgba(77,184,122,0.25);border-radius:10px;padding:14px 18px;color:var(--green);font-size:13px;margin-top:14px;line-height:1.5;}
+.loading{text-align:center;padding:80px 0;}
+.spinner{width:44px;height:44px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.75s linear infinite;margin:0 auto 20px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.tabs{display:flex;border:1px solid var(--border);border-radius:10px;overflow:hidden;width:fit-content;margin-bottom:18px;}
+.tab-btn{background:transparent;border:none;color:var(--muted);padding:10px 22px;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all 0.15s;}
+.tab-btn+.tab-btn{border-left:1px solid var(--border);}
+.tab-btn.active{background:var(--s2);color:var(--text);}
+.progress-bar{height:3px;background:var(--s3);border-radius:2px;overflow:hidden;}
+.progress-fill{height:100%;border-radius:2px;}
+.form-group{margin-bottom:16px;}
+.form-label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:8px;letter-spacing:0.5px;}
+.divider{display:flex;align-items:center;gap:12px;margin:18px 0;}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border);}
+.divider span{font-size:12px;color:var(--dim);}
+/* Skeleton */
+.skeleton{background:linear-gradient(90deg,var(--s2) 25%,var(--s3) 50%,var(--s2) 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:8px;}
+@keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+@media(max-width:560px){.container{padding:0 16px;}}
