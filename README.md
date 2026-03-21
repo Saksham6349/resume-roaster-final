@@ -12,7 +12,7 @@
 
 ## 🖥️ Live Demo
 
-**[resume-roaster.onrender.com](https://resume-roaster-final.onrender.com)**
+**[resume-roaster-final.onrender.com](https://resume-roaster-final.onrender.com)**
 
 ---
 
@@ -69,17 +69,17 @@
 ```
 
 ### 3-Step AI Pipeline
-1. **Extract** — Parse resume into structured data
-2. **Analyze** — Deep ATS scoring using step 1 context
-3. **Match** — Semantic JD matching (when JD is provided)
+1. **Extract** — Parse resume into structured data (name, skills, experience)
+2. **Analyze** — Deep ATS scoring using step 1 context for accuracy
+3. **Match** — Semantic JD matching when job description is provided
 
 ---
 
 ## Run Locally
 ```bash
 # 1. Clone
-git clone https://github.com/YOUR_USERNAME/resume-roaster
-cd resume-roaster
+git clone https://github.com/Saksham6349/resume-roaster-final
+cd resume-roaster-final/resume-roaster-v4
 
 # 2. Install
 npm install
@@ -93,7 +93,7 @@ cp .env.example .env
 npm run dev
 ```
 
-- Frontend → http://localhost:5173
+- Frontend → http://localhost:5173  
 - Backend → http://localhost:3000
 
 ---
@@ -105,22 +105,8 @@ MONGODB_URI=            # mongodb.com/atlas — free
 JWT_SECRET=             # any long random string
 GOOGLE_CLIENT_ID=       # console.cloud.google.com
 GOOGLE_CLIENT_SECRET=   # console.cloud.google.com
-BASE_URL=https://your-app.onrender.com
+BASE_URL=https://resume-roaster-final.onrender.com
 PORT=3000
-```
-
----
-
-## Deploy (Render)
-
-1. Push to GitHub
-2. [render.com](https://render.com) → New Web Service → connect repo
-3. **Build Command:** `npm install && npm run build`
-4. **Start Command:** `node server.js`
-5. Add all env vars
-6. Add production redirect URI in Google Cloud Console:
-```
-https://your-app.onrender.com/api/auth/google/callback
 ```
 
 ---
@@ -140,4 +126,4 @@ Covers: Google OAuth, JWT validation, protected routes, history CRUD, cross-user
 
 ---
 
-
+*Built by [Saksham Gupta](https://github.com/Saksham6349) · CSE @ VIT Vellore · 2026*
