@@ -140,4 +140,4 @@ Covers: Google OAuth, JWT validation, protected routes, history CRUD, cross-user
 
 ---
 
-*Built by [Saksham Gupta](https://github.com/YOUR_USERNAME) · CSE @ VIT Vellore · 2026*
+
